@@ -67,30 +67,37 @@
     </div>
   </section>
 
-  <section id="page-calendar" class="page-section">
-    <h2 class="fw-bold mb-4">Google Calendar</h2>
-    <div class="calendar-container shadow-sm">
-      <iframe src="https://calendar.google.com/calendar/embed?src=mkt.gammaco@gmail.com&color=%234F46E5&src=th.th%23holiday%40group.v.calendar.google.com&color=%23B1365F&ctz=Asia%2FBangkok" 
-        style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no">
-      </iframe>
+  <section id="page-settings" class="page-section">
+    <h2 class="fw-bold mb-4">Settings</h2>
+    
+    <div class="card-modern p-4 mb-4">
+      <h5 class="fw-bold">ข้อมูลเวอร์ชัน</h5>
+      <p class="text-muted mb-0">Version 5.8.4 (GitHub Pages Integrated)</p>
     </div>
-  </section>
 
-  <section id="page-files" class="page-section">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="fw-bold m-0">รายการไฟล์</h2>
-      <input type="text" id="search" class="form-control w-25 rounded-pill shadow-sm" placeholder="🔍 ค้นหาไฟล์..." onkeyup="handleSearch()">
+    <div class="mb-4">
+      <button class="btn btn-primary rounded-pill px-4 shadow-sm" onclick="fetchData()">
+        <i class="fas fa-sync me-2"></i>รีโหลดข้อมูลใหม่
+      </button>
     </div>
-    <div class="card-modern">
-      <div id="loader" class="loader"></div>
-      <div class="table-responsive">
-        <table class="table mb-0 align-middle" id="mainTable" style="display:none;">
-          <thead class="bg-light small"><tr id="tableHead"></tr></thead>
-          <tbody id="tableBody"></tbody>
-        </table>
-      </div>
+
+    <hr class="my-4">
+
+    <div class="mt-4 mb-4">
+      <h6 class="fw-bold text-dark"><i class="fas fa-database me-2"></i>แหล่งข้อมูล</h6>
+      <p class="text-muted small">คุณสามารถจัดการข้อมูลไฟล์งานได้โดยตรงผ่าน Google Sheets</p>
+      <a href="https://docs.google.com/spreadsheets/d/1UGBm-acdlhog4OQe8viWHGikOMJg758Pwv4P5Wgp3sg/edit?usp=sharing" 
+         target="_blank" 
+         class="btn btn-success rounded-pill btn-sm px-4 shadow-sm">
+        <i class="fas fa-file-excel me-1"></i> เปิด Google Sheets
+      </a>
     </div>
-    <nav class="mt-4"><ul class="pagination justify-content-center" id="pagination"></ul></nav>
+
+    <div class="card-modern p-4 mb-4 border-start border-danger border-4">
+      <h6 class="fw-bold text-danger">Danger Zone</h6>
+      <p class="text-muted small">ล้างการตั้งค่าสีฟอนต์ที่คุณเคยเลือกไว้ในบราวเซอร์นี้</p>
+      <button class="btn btn-sm btn-outline-danger rounded-pill px-4" onclick="resetAllColors()">ล้างค่าสีบรรทัดทั้งหมด</button>
+    </div>
   </section>
 
   <section id="page-settings" class="page-section">
